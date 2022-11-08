@@ -1,5 +1,5 @@
 import Tkinter as tk
-from gui.frames import BaseFrame
+from gui.frames import TestFrame
 
 
 
@@ -7,6 +7,6 @@ root = tk.Tk()
 root.title('Mage City')
 root.update()
 
-app = BaseFrame(root,300,300)
+app = TestFrame(root,300,300)
 
 root.mainloop()
