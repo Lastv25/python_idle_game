@@ -1,13 +1,17 @@
-import Tkinter as tk
-import ttk
+import tkinter as tk
+from tkinter import ttk
+
+from gui.button import BaseButton
 from gui.labels import BaseLabel
+
 
 class BaseFrame(tk.Frame):
     """
-    Displays a series of buttons that change the colour of the Tkinter 
+    Displays a series of buttons that change the colour of the Tkinter
     frame when pressed.
     """
-    def __init__(self, master,height,width):
+
+    def __init__(self, master, height, width):
         tk.Frame.__init__(self, master)
         self.master = master
 
@@ -15,8 +19,11 @@ class BaseFrame(tk.Frame):
         self.mainf.grid(row=0, column=0)
 
         self.s = ttk.Style()
-        self.s.theme_use('aqua')
-        self.mainf.configure(background='{}'.format('black'))
+        self.s.theme_use("aqua")
+        self.mainf.configure(background="{}".format("black"))
 
     def add_label_text(self, text):
-        BaseLabel(self.mainf,text)
+        BaseLabel(self.mainf, text)
+
+    def add_button(self, text, command, position):
+        BaseButton(self.mainf, text, command, position)

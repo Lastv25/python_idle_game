@@ -1,6 +1,10 @@
-import Tkinter as tk
-import ttk
+import tkinter as tk
+from tkinter import ttk
+
 
 class BaseLabel(tk.Label):
-    def __init__(self,parent, text):
-        ttk.Label(parent, text=text)
+    def __init__(self, parent, text):
+        ttk.Label(
+            parent,
+            text=text,
+        )
