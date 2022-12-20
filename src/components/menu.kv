@@ -1,0 +1,24 @@
+#:kivy 2.1.0
+
+<Menu>:
+    canvas.before:
+        Color:
+            rgba: 0, 0, 0, 0
+        Rectangle:
+            pos: self.pos
+            size: self.size
+            source: "round.png"
+    BoxLayout:
+        orientation: "vertical"
+        pos_hint: {'center_x': 0.5, 'center_y':0.5}
+        size_hint: 0.75, 0.75
+        Label:
+            text:"Magic City Idle"
+            font_size: self.width/10
+            font_name: 'src/assets/fonts/Magic Retro.ttf'
+        Button:
+            text:"Start Game"
+        Button:
+            text:"Exit"
+        Button:
+            text:"About"  
