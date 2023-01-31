@@ -1,6 +1,7 @@
 #:kivy 2.1.0
 
 <Menu>:
+    name: "menu"
     canvas.before:
         Color:
             rgba: 0, 0, 0, 0
@@ -20,6 +21,7 @@
             font_name: 'src/assets/fonts/Magic Retro.ttf'
         RoundedButton:
             text:"Start Game"
+            on_release: app.root.current = 'mainscreen'
         RoundedButton:
             text:"Exit"
         RoundedButton:
