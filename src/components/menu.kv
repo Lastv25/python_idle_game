@@ -12,13 +12,26 @@
         orientation: "vertical"
         pos_hint: {'center_x': 0.5, 'center_y':0.5}
         size_hint: 0.75, 0.75
+        padding: 50
+        spacing: 20
         Label:
             text:"Magic City Idle"
             font_size: self.width/10
             font_name: 'src/assets/fonts/Magic Retro.ttf'
-        Button:
+        RoundedButton:
             text:"Start Game"
-        Button:
+        RoundedButton:
             text:"Exit"
-        Button:
-            text:"About"  
+        RoundedButton:
+            text:"About" 
+
+<RoundedButton@Button>
+    background_color: (0,0,0,0)
+    background_normal: ''
+    canvas.before:
+        Color:
+            rgba: (23, 26, 26, 0.2)
+        RoundedRectangle:
+            size: self.size
+            pos: self.pos
+            radius: [10]
