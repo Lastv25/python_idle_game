@@ -12,13 +12,13 @@
             orientation: 'horizontal'
             size: root.width, root.height
             spacing: 10
-            canvas.before:
-                Color:
-                    rgba: 1, 0, 0, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
-                    source: "round.png"
+            #canvas.before:
+            #    Color:
+            #        rgba: 1, 0, 0, 1
+            #    Rectangle:
+            #        pos: self.pos
+            #        size: self.size
+            #        source: "round.png"
 
             ScrollView:
                 id: scroll_view
@@ -35,11 +35,11 @@
             BoxLayout:
                 orientation: 'vertical'
                 spacing: 10
-                size_hint_y: 0.5
 
                 GridLayout:
                     cols: 3
                     rows: 4
+                    size_hint_y: 0.5
                     
                     Label:
                         text: "stat 1"
@@ -73,19 +73,28 @@
                     orientation: 'vertical'
                     padding: 50
                     spacing: 20
+
+                    Image:
+                        id: fire_gif
+                        source: 'assets/animations/5Mz4.gif'
+                        center: self.parent.center
+                        size: 500, 500
+                        allow_stretch: True
+                        anim_delay: 0.10
+                        anim_loop: 10000000000000000
         
         AnchorLayout: 
             anchor_x: 'left'
             anchor_y: 'bottom'
             size_hint_y: 0.05
 
-            canvas.before:
-                Color:
-                    rgba: 0, 0, 1, 1
-                Rectangle:
-                    pos: self.pos
-                    size: self.size
-                    source: "round.png"
+            #canvas.before:
+            #    Color:
+            #        rgba: 0, 0, 1, 1
+            #    Rectangle:
+            #        pos: self.pos
+            #        size: self.size
+            #        source: "round.png"
 
             BoxLayout:
                 size_hint: None, None
