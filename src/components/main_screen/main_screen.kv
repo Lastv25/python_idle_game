@@ -17,11 +17,13 @@
 
             Button:
                 text:"Exit"
-                on_release: print('hello')
+                on_release: 
+                    app.root.current = 'menu'
+                    app.root.transition.direction = 'right'
 
             Button:
-                text:"other"
-                on_release: print('hello')
+                text:"settings"
+                on_release: print('hello: No settings yet')
 
         
         BoxLayout:

@@ -21,7 +21,9 @@
             font_name: 'src/assets/fonts/Magic Retro.ttf'
         RoundedButton:
             text:"Start Game"
-            on_release: app.root.current = 'mainscreen'
+            on_release: 
+                app.root.current = 'mainscreen'
+                app.root.transition.direction = 'left'
         RoundedButton:
             text:"Exit"
         RoundedButton:
