@@ -1,16 +1,36 @@
 #:kivy 2.1.0
+#: include components/elements/buttons.kv
 
 <MainScreen>:
     name: "mainscreen"
-    on_enter: app.root.current_screen.text_pop()
+    on_enter: app.root.current_screen.text_init()
+
+    AnchorLayout: 
+
+        anchor_x: 'left'
+        anchor_y: 'bottom'
+
+        BoxLayout:
+            size_hint: None, None
+            size: 200, 20
+            
+            spacing: 10
+
+            RoundedButton:
+                text:"Exit"
+                on_release: 
+                    app.root.current = 'menu'
+                    app.root.transition.direction = 'right'
+
+            RoundedButton:
+                text:"settings"
+                on_release: print('hello: No settings yet')
 
     GridLayout:
         cols: 2
         rows: 2
         size: root.width, root.height
         spacing: 10
-        row_default_height: 100
-        row_force_default: True
 
 
         BoxLayout:
@@ -18,15 +38,7 @@
             size_hint: None,None
             spacing: 20
 
-            Button:
-                text:"Exit"
-                on_release: 
-                    app.root.current = 'menu'
-                    app.root.transition.direction = 'right'
-
-            Button:
-                text:"settings"
-                on_release: print('hello: No settings yet')
+            
 
         
         BoxLayout:
@@ -37,7 +49,6 @@
         ScrollView:
             id: scroll_view
             always_overscroll: False
-            size_hint: None, None
             BoxLayout:
                 size_hint: None, None
                 height: self.minimum_height

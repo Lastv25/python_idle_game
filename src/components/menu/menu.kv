@@ -1,4 +1,5 @@
 #:kivy 2.1.0
+#: include components/elements/buttons.kv
 
 <Menu>:
     name: "menu"
@@ -28,14 +29,3 @@
             text:"Exit"
         RoundedButton:
             text:"About" 
-
-<RoundedButton@Button>
-    background_color: (0,0,0,0)
-    background_normal: ''
-    canvas.before:
-        Color:
-            rgba: (23, 26, 26, 0.2)
-        RoundedRectangle:
-            size: self.size
-            pos: self.pos
-            radius: [10]

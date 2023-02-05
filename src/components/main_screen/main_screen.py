@@ -15,13 +15,10 @@ class MainScreen(Screen):
         self.text_counter += 1
         self.ids.scroll_view.scroll_y = 0
 
-    def text_pop(self):
+    def text_init(self):
         with open('src/assets/texts/lorem_ipsum.txt', 'r') as file:
             for row in range(self.row_limit):
-                print('-'*100)
                 line = file.readline()
                 self.add_text(line)
-                print(line)
-                time.sleep(self.time_text)
 
 
