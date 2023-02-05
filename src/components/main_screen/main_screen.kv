@@ -34,13 +34,40 @@
 
             BoxLayout:
                 orientation: 'vertical'
-                padding: 50
-                spacing: 20
+                spacing: 10
+                size_hint_y: 0.5
 
-                BoxLayout:
-                    orientation: 'vertical'
-                    padding: 50
-                    spacing: 20
+                GridLayout:
+                    cols: 3
+                    rows: 4
+                    
+                    Label:
+                        text: "stat 1"
+
+                    Label:
+                        text: "stat 2"
+
+                    Label:
+                        text: "stat 3"
+
+                    Label:
+                        text: "stat 4"
+
+                    Label:
+                        text: "stat 5"
+
+                    Label:
+                        text: "stat 6"
+
+                    BoxLayout:
+                        orientation: 'vertical'
+
+                    RoundedButton:
+                        text:"pop_up stats"
+                        on_release: print('hello: No pop up yet')
+                    
+                    BoxLayout:
+                        orientation: 'vertical'
 
                 BoxLayout:
                     orientation: 'vertical'
