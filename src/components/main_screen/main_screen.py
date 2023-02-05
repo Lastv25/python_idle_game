@@ -7,7 +7,7 @@ class MainScreen(Screen):
         super().__init__(**kwargs)
         self.text_counter = 0
         self.row_limit = 5
-        self.time_text = 1
+        self.time_text = 0.01
 
     
     def add_text(self, text):

@@ -9,11 +9,29 @@
         rows: 2
         size: root.width, root.height
         spacing: 10
+
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 50
+            spacing: 20
+
+            Button:
+                text:"Exit"
+                on_release: print('hello')
+
+            Button:
+                text:"other"
+                on_release: print('hello')
+
         
+        BoxLayout:
+            orientation: 'horizontal'
+            padding: 50
+            spacing: 20
+
         ScrollView:
             id: scroll_view
             always_overscroll: False
-            multiline: True
             BoxLayout:
                 size_hint_y: None
                 height: self.minimum_height
@@ -22,3 +40,8 @@
                     id: label
                     size_hint: None, None
                     size: self.texture_size 
+
+        BoxLayout:
+            orientation: 'vertical'
+            padding: 50
+            spacing: 20
