@@ -9,10 +9,13 @@
         rows: 2
         size: root.width, root.height
         spacing: 10
+        row_default_height: 100
+        row_force_default: True
+
 
         BoxLayout:
             orientation: 'horizontal'
-            padding: 50
+            size_hint: None,None
             spacing: 20
 
             Button:
@@ -34,8 +37,9 @@
         ScrollView:
             id: scroll_view
             always_overscroll: False
+            size_hint: None, None
             BoxLayout:
-                size_hint_y: None
+                size_hint: None, None
                 height: self.minimum_height
                 orientation: 'vertical'
                 Label:
